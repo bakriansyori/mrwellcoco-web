@@ -39,6 +39,10 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Produsen cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor dari Indonesia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Hijau Kelapa — Produk Turunan Kelapa Berkualitas Ekspor" },
+      { name: "twitter:description", content: "Produsen cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor dari Indonesia." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88140c43-825c-45ef-acf9-181a50c5066b/id-preview-aa41b240--a8306aa6-e64a-4eac-97f3-e33f9fe63707.lovable.app-1776929319467.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88140c43-825c-45ef-acf9-181a50c5066b/id-preview-aa41b240--a8306aa6-e64a-4eac-97f3-e33f9fe63707.lovable.app-1776929319467.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
