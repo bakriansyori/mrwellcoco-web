@@ -1,5 +1,3 @@
-import Index from "./routes/index";
-
 export default function App() {
-  return <Index />;
+  return <h1 style={{color: "red"}}>TEST BERHASIL</h1>;
 }
