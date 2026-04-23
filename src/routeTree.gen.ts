@@ -9,38 +9,98 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TentangRouteImport } from './routes/tentang'
+import { Route as ProdukRouteImport } from './routes/produk'
+import { Route as KontakRouteImport } from './routes/kontak'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProdukSlugRouteImport } from './routes/produk.$slug'
 
+const TentangRoute = TentangRouteImport.update({
+  id: '/tentang',
+  path: '/tentang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdukRoute = ProdukRouteImport.update({
+  id: '/produk',
+  path: '/produk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontakRoute = KontakRouteImport.update({
+  id: '/kontak',
+  path: '/kontak',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProdukSlugRoute = ProdukSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProdukRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kontak': typeof KontakRoute
+  '/produk': typeof ProdukRouteWithChildren
+  '/tentang': typeof TentangRoute
+  '/produk/$slug': typeof ProdukSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kontak': typeof KontakRoute
+  '/produk': typeof ProdukRouteWithChildren
+  '/tentang': typeof TentangRoute
+  '/produk/$slug': typeof ProdukSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kontak': typeof KontakRoute
+  '/produk': typeof ProdukRouteWithChildren
+  '/tentang': typeof TentangRoute
+  '/produk/$slug': typeof ProdukSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/kontak' | '/produk' | '/tentang' | '/produk/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/kontak' | '/produk' | '/tentang' | '/produk/$slug'
+  id: '__root__' | '/' | '/kontak' | '/produk' | '/tentang' | '/produk/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KontakRoute: typeof KontakRoute
+  ProdukRoute: typeof ProdukRouteWithChildren
+  TentangRoute: typeof TentangRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tentang': {
+      id: '/tentang'
+      path: '/tentang'
+      fullPath: '/tentang'
+      preLoaderRoute: typeof TentangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produk': {
+      id: '/produk'
+      path: '/produk'
+      fullPath: '/produk'
+      preLoaderRoute: typeof ProdukRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontak': {
+      id: '/kontak'
+      path: '/kontak'
+      fullPath: '/kontak'
+      preLoaderRoute: typeof KontakRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +108,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/produk/$slug': {
+      id: '/produk/$slug'
+      path: '/$slug'
+      fullPath: '/produk/$slug'
+      preLoaderRoute: typeof ProdukSlugRouteImport
+      parentRoute: typeof ProdukRoute
+    }
   }
 }
 
+interface ProdukRouteChildren {
+  ProdukSlugRoute: typeof ProdukSlugRoute
+}
+
+const ProdukRouteChildren: ProdukRouteChildren = {
+  ProdukSlugRoute: ProdukSlugRoute,
+}
+
+const ProdukRouteWithChildren =
+  ProdukRoute._addFileChildren(ProdukRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KontakRoute: KontakRoute,
+  ProdukRoute: ProdukRouteWithChildren,
+  TentangRoute: TentangRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
