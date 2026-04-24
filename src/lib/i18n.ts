@@ -3,7 +3,7 @@ import { createContext, useContext } from "react";
 export type Lang = "id" | "en";
 
 export const WHATSAPP_NUMBER = "6281234567890"; // contoh nomor — ganti sesuai kebutuhan
-export const EMAIL_ADDRESS = "info@hijaukelapa.co.id";
+export const EMAIL_ADDRESS = "info@mrwellcoco.com";
 
 export const productSlugs = ["cocopeat", "cocofiber", "cocochip", "arang-batok"] as const;
 export type ProductSlug = (typeof productSlugs)[number];
