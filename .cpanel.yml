@@ -1,5 +1,5 @@
 ---
 deployment:
-tasks:
-- export DEPLOYPATH=/home/mrwf7838/public_html/dev.mrwellcoco.com
-- /bin/cp -r * $DEPLOYPATH
+  tasks:
+    - export DEPLOYPATH=/home/mrwf7838/public_html/dev.mrwellcoco.com
+    - /bin/cp -r * $DEPLOYPATH
