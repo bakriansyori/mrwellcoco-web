@@ -1,9 +1,7 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 import { LangProvider } from "@/components/LangProvider";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -28,47 +26,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hijau Kelapa — Produk Turunan Kelapa Berkualitas Ekspor" },
-      { name: "description", content: "Produsen cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor dari Indonesia." },
-      { name: "author", content: "Hijau Kelapa" },
-      { property: "og:title", content: "Hijau Kelapa — Produk Turunan Kelapa Berkualitas Ekspor" },
-      { property: "og:description", content: "Produsen cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor dari Indonesia." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Hijau Kelapa — Produk Turunan Kelapa Berkualitas Ekspor" },
-      { name: "twitter:description", content: "Produsen cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor dari Indonesia." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88140c43-825c-45ef-acf9-181a50c5066b/id-preview-aa41b240--a8306aa6-e64a-4eac-97f3-e33f9fe63707.lovable.app-1776929319467.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88140c43-825c-45ef-acf9-181a50c5066b/id-preview-aa41b240--a8306aa6-e64a-4eac-97f3-e33f9fe63707.lovable.app-1776929319467.png" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="id">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (
