@@ -79,7 +79,7 @@ export const translations: Record<Lang, Dict> = {
     "footer.tagline": "Produk turunan kelapa alami untuk pasar global.",
     "footer.quickLinks": "Tautan Cepat",
     "footer.contact": "Kontak",
-    "footer.rights": "© 2026 Hijau Kelapa. Hak cipta dilindungi.",
+    "footer.rights": "© 2026 mrwellcoco. Hak cipta dilindungi.",
 
     "whatsapp.default": "Halo, saya tertarik dengan produk turunan kelapa Anda.",
     "whatsapp.product": "Halo, saya tertarik dengan produk",
@@ -152,7 +152,7 @@ export const translations: Record<Lang, Dict> = {
     "footer.tagline": "Natural coconut by-products for the global market.",
     "footer.quickLinks": "Quick Links",
     "footer.contact": "Contact",
-    "footer.rights": "© 2026 Hijau Kelapa. All rights reserved.",
+    "footer.rights": "© 2026 mrwellcoco. All rights reserved.",
 
     "whatsapp.default": "Hello, I'm interested in your coconut by-products.",
     "whatsapp.product": "Hello, I'm interested in",
