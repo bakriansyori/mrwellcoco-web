@@ -50,6 +50,9 @@ function HomePage() {
             <p className="mt-5 max-w-2xl text-lg text-white/90 md:text-xl">
               {t("hero.subtitle")}
             </p>
+            <p className="mt-5 max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-5 text-base leading-relaxed text-white/95 backdrop-blur md:text-lg">
+              {t("hero.narrative")}
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link to="/produk">

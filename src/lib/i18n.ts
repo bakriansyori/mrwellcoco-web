@@ -22,6 +22,7 @@ export const translations: Record<Lang, Dict> = {
 
     "hero.title": "Kekayaan Kelapa Nusantara untuk Dunia",
     "hero.subtitle": "Cocopeat, cocofiber, cocochip, dan arang batok kelapa pilihan — diolah secara alami dengan standar ekspor.",
+    "hero.narrative": "Produk turunan kelapa kami hadir sebagai solusi alami, berkelanjutan, dan bernilai tinggi untuk berbagai kebutuhan industri dan pertanian modern. Dengan memanfaatkan setiap bagian dari kelapa secara optimal, kami menghadirkan cocopeat, cocofiber, cocochip, dan arang berkualitas ekspor yang ramah lingkungan dan terpercaya.",
     "hero.cta.products": "Lihat Produk",
     "hero.cta.whatsapp": "WhatsApp Kami",
 
@@ -94,6 +95,7 @@ export const translations: Record<Lang, Dict> = {
 
     "hero.title": "The Richness of Indonesian Coconut for the World",
     "hero.subtitle": "Premium cocopeat, cocofiber, cocochip, and coconut shell charcoal — naturally processed to international export standards.",
+    "hero.narrative": "Our coconut by-products offer natural, sustainable, and high-value solutions for modern industry and agriculture. By optimally utilizing every part of the coconut, we deliver export-grade cocopeat, cocofiber, cocochip, and charcoal that are eco-friendly and trusted worldwide.",
     "hero.cta.products": "View Products",
     "hero.cta.whatsapp": "Message Us",
 
