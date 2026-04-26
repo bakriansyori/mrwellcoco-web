@@ -12,7 +12,7 @@ type Dict = Record<string, string>;
 
 export const translations: Record<Lang, Dict> = {
   id: {
-    "brand.name": "Hijau Kelapa",
+    "brand.name": "Mr WellCoco",
     "brand.tagline": "Produk Turunan Kelapa Berkualitas Ekspor",
     "nav.home": "Beranda",
     "nav.products": "Produk",
@@ -57,7 +57,7 @@ export const translations: Record<Lang, Dict> = {
     "spec.fixedCarbon": "Karbon Tetap",
     "spec.length": "Panjang Serat",
 
-    "about.title": "Tentang Hijau Kelapa",
+    "about.title": "Tentang Mr WellCoco",
     "about.lead": "Kami adalah produsen produk turunan kelapa dari jantung Nusantara, berkomitmen menghadirkan kelestarian alam dalam setiap produk.",
     "about.story.title": "Cerita Kami",
     "about.story.body": "Berdiri dengan visi memaksimalkan potensi kelapa Indonesia, kami bekerja sama dengan petani lokal untuk menghasilkan cocopeat, cocofiber, cocochip, dan arang batok kelapa berkualitas ekspor. Setiap butir kelapa kami olah dengan teknik modern yang tetap menjaga sifat alaminya.",
@@ -85,7 +85,7 @@ export const translations: Record<Lang, Dict> = {
     "whatsapp.product": "Halo, saya tertarik dengan produk",
   },
   en: {
-    "brand.name": "Hijau Kelapa",
+    "brand.name": "Mr WellCoco",
     "brand.tagline": "Export-Grade Coconut By-Products",
     "nav.home": "Home",
     "nav.products": "Products",
@@ -130,7 +130,7 @@ export const translations: Record<Lang, Dict> = {
     "spec.fixedCarbon": "Fixed Carbon",
     "spec.length": "Fiber Length",
 
-    "about.title": "About Hijau Kelapa",
+    "about.title": "About Mr WellCoco",
     "about.lead": "We are coconut by-product manufacturers from the heart of the Indonesian archipelago, committed to bringing nature's sustainability into every product.",
     "about.story.title": "Our Story",
     "about.story.body": "Founded with a vision to maximize the potential of Indonesian coconuts, we work with local farmers to produce export-grade cocopeat, cocofiber, cocochip, and coconut shell charcoal. Every coconut is processed with modern techniques while preserving its natural properties.",
