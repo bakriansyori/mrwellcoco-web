@@ -1,0 +1,27 @@
+name: Deploy to Subdomain Dev
+
+on:
+  push:
+    branches:
+      - dev # Ini akan berjalan setiap kali Anda mengklik 'Commit changes' di branch main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: 🚀 Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME_DEV }}
+          password: ${{ secrets.FTP_PASSWORD_DEV }}
+          local-dir: ./dist/
+          server-dir: ./
